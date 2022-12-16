@@ -1,0 +1,7 @@
+---
+- hosts: dev
+
+  tasks:
+    - include: one.yml
+    - name: restart httpd
+      service: name='{{abc}}' state=restarted
